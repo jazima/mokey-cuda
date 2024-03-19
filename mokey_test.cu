@@ -127,12 +127,11 @@ int main(int argc, char **argv) {
   free(A);
   free(B);
   free(C);
-  free(C_ref);
+  free(exps);
   cudaFree(dA);
   cudaFree(dB);
   cudaFree(dC);
-  cudaFree(dC_ref);
-  cublasDestroy(handle);
+  cudaFree(dExps);
 
   return 0;
 };
