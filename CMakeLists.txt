@@ -23,6 +23,6 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC)
 
 # generate executable
-add_executable(mokey mokey.cu ${SRC})
+add_executable(mokey mokey_test.cu ${SRC})
 set_target_properties(mokey PROPERTIES CUDA_ARCHITECTURES ${CUDA_COMPUTE_CAPABILITY})
 target_link_libraries(mokey ${CUDA_LIBRARIES} ${CUDA_CUBLAS_LIBRARIES})
